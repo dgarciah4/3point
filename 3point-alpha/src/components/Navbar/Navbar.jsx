@@ -13,6 +13,7 @@ import {
   BeakerIcon,
   BanknotesIcon,
   WrenchIcon,
+  AcademicCapIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, EnvelopeIcon } from '@heroicons/react/20/solid'
 import { FaBeer } from 'react-icons/fa';

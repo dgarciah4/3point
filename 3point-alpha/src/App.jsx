@@ -22,6 +22,9 @@ import Articles from './components/Pages/Articles'
 import TermsOfService from './components/Pages/TermsOfService'
 import CheatSheet from './components/Pages/CheatSheet'
 import LandingPage from './components/Pages/LandingPage'
+import Footer from './components/Footer/Footer.jsx'
+import BettingEducationCenter from './components/BettingEducationCenter/BettingEducationCenter';
+
 
 export default function App() {
   return (
@@ -45,11 +48,16 @@ export default function App() {
       <Route path="/CheatSheet" element={<CheatSheet />} />
       <Route path="/Articles" element={<Articles />} />
       <Route path="/LandingPage" element={<LandingPage />} />
+      <Route path="/BettingEducationCenter" element={<BettingEducationCenter />} />
     </Routes>
    
-    
+    <Footer />
       </>
+  
+      
+      
   )
+  
 }
 /*  CONNECTING TO DATABASE
 const { MongoClient, ServerApiVersion } = require('mongodb');
