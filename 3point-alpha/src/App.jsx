@@ -26,6 +26,7 @@ import Footer from './components/Footer/Footer.jsx'
 import BettingEducationCenter from './components/BettingEducationCenter/BettingEducationCenter';
 
 
+
 export default function App() {
   return (
     <>
@@ -48,10 +49,13 @@ export default function App() {
       <Route path="/CheatSheet" element={<CheatSheet />} />
       <Route path="/Articles" element={<Articles />} />
       <Route path="/LandingPage" element={<LandingPage />} />
-      <Route path="/BettingEducationCenter" element={<BettingEducationCenter />} />
+      
     </Routes>
    
     <Footer />
+    <Routes>
+    <Route path ="/BettingEducationCenter" element={<BettingEducationCenter />} />
+    </Routes>
       </>
   
       

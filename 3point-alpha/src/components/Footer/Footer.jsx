@@ -1,12 +1,13 @@
 import React from 'react';
 import Logo from './3Point_Footer.svg'
+import { Link } from 'react-router-dom'
       const Footer = () => (
         <footer className='bg-transparent fixed bottom-0 h-15 w-screen mb-auto text-center text-transparent dark:bg-transparent dark:text-transparent lg:text-left'>
           
             <div className='flex items-center justify-center border-b-2 border-gold p-6 dark:border-gold-300 lg:justify-between
             text-transparent dark:bg-transparent dark:text-transparent'>
               <div className = 'mr-12 hidden lg:block'>
-                <span className ='dark:text-transparent'>Get connected with us on social media:</span>
+                <span className ='dark:text-white'>Get connected with us on social media:</span>
               </div>
 
               
@@ -56,11 +57,16 @@ import Logo from './3Point_Footer.svg'
               </div>
               
               <div className = "">
-                  <p className="mb-4">
-                  <a href="./BettingEducationCenter/" target ="_self" className="text-neutral-600 hover:text-gold dark:text-neutral-200"
-                    >Betting Education Center</a
-                  >
+                  <p className="mb-4 text-neutral-600 hover:text-gold dark:text-white">
+                    <ul>
+                    <Link to = "/BettingEducationCenter"> 
+                    Betting Education Center
+                    </Link>
+                    
+                  
+                  </ul>
                   </p>
+                  
         <p className="mb-4">
           <a href="#!" target = "_blank" className="text-neutral-600 hover:text-gold dark:text-neutral-200"
             >Terms of Service</a
@@ -129,10 +135,24 @@ import Logo from './3Point_Footer.svg'
                 &copy; {new Date().getFullYear()} 3Point. All rights reserved.
             </p>
         </div>
+
+
     </div>
     
     </footer>
       );
       export default Footer;
+
+      function CustomLink({to, children, ...props} ) {
+       const resolvedPath =  useResolvedPath(to)
+       const isActive = useMatch({path: resolvedPath.pathname, end:true})
+       return(
+        <li className={isActive ? "active" : ""}>
+          <Link to={to} {...props}>
+            {children}
+          </Link>
+        </li>
+       )
+      }
     
    
