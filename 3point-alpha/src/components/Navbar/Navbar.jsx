@@ -13,7 +13,6 @@ import {
   BeakerIcon,
   BanknotesIcon,
   WrenchIcon,
-  AcademicCapIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, EnvelopeIcon } from '@heroicons/react/20/solid'
 import { FaBeer } from 'react-icons/fa';
@@ -27,6 +26,8 @@ const more = [
   { name: 'Betting Simulator', description: 'Simulate your props, or just simulate props your interested in', href: '/BettingSimulator', icon: BanknotesIcon },
   { name: 'Cheat Sheet', description: 'Cheat Sheet prop projections', href: '/CheatSheet', icon: ChartPieIcon },
 ]
+
+
 const sports = [
    { name: 'Basketball', href: '/Basketball', icon: GiBasketballBasket },
   { name: 'Football', href: '/Football', icon: IoAmericanFootballOutline },
@@ -34,6 +35,7 @@ const sports = [
   { name: 'Hockey', href: '/Hockey', icon: GiHockey },
   { name: 'Soccer', href: '/Soccer', icon: GiSoccerField },
 ]
+
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact Support', href: '#', icon: EnvelopeIcon },

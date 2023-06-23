@@ -57,6 +57,14 @@ function LoginPage() {
             <AiOutlineGoogle className="text-black text-3xl" />
             <AiFillFacebook className="text-black text-3xl ml-2" />
           </div>
+           <div className="flex justify-center mt-2">
+            <span className="text-sm text-black">
+              Don't have an account? Sign up{' '}
+              <NavLink to="/signup" className="text-blue-500 hover:text-gold underline">
+                here
+              </NavLink>
+            </span>
+          </div>
         </form>
       </div>
     </div>

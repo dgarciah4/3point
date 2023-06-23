@@ -1,5 +1,7 @@
+
+
 import React from 'react'
-import Logo from './Logo.svg';'./3Point_Footer.svg'
+
 import { Link } from 'react-router-dom'
 
 const BettingEducationCenter = () => {
@@ -13,10 +15,7 @@ const BettingEducationCenter = () => {
         <div className ='mx-6 py-10 text-center md:text-left lg:text-center grid-1 grid gap-8 md:grid-cols-3 lg:grid-cols-4'>
         <div className=''>
                 <h2 className='mb-4 flex items-center justify-center font-semibold uppercase md:justify-start'>
-                <Link to="/Home" className="-m-1.5 p-1.5">
-                   <span className="sr-only">3Point</span> 
-                <img className=""style={{height: 200, width: 200}} src={Logo} alt="" />
-                </Link>
+                
                 </h2>
                 
               </div>
@@ -91,4 +90,5 @@ const BettingEducationCenter = () => {
     )
     
 }
+
 export default BettingEducationCenter;

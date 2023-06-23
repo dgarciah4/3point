@@ -22,10 +22,20 @@ import Articles from './components/Pages/Articles'
 import TermsOfService from './components/Pages/TermsOfService'
 import CheatSheet from './components/Pages/CheatSheet'
 import LandingPage from './components/Pages/LandingPage'
-import Footer from './components/Footer/Footer.jsx'
-import BettingEducationCenter from './components/BettingEducationCenter/BettingEducationCenter';
-
-
+import Membership from './components/Pages/Membership'
+import GettingStarted from './components/Pages/GettingStarted'
+import BettingEducationCenter from './components/Pages/BettingEducationCenter'
+import LiveData from './components/Pages/LiveData'
+import ArbCalc from './components/Pages/ArbCalc'
+import EVCalculator from './components/Pages/EVCalculator'
+import Friends from './components/Pages/Friends'
+import Leaderboards from './components/Pages/Leaderboards'
+import Achievements from './components/Pages/Achievements'
+import ContactUs from './components/Pages/ContactUs'
+import ErrorPage from './components/Pages/ErrorPage'
+import Unauth from './components/Pages/Unauth'
+import SignUp from './components/Pages/SignUp'
+import Footer from './components/Footer/Footer'
 
 export default function App() {
   return (
@@ -49,19 +59,26 @@ export default function App() {
       <Route path="/CheatSheet" element={<CheatSheet />} />
       <Route path="/Articles" element={<Articles />} />
       <Route path="/LandingPage" element={<LandingPage />} />
-      
+       <Route path="/Membership" element={<Membership />} />
+      <Route path="/GettingStarted" element={<GettingStarted />} />
+      <Route path="/LiveData" element={<LiveData />} />
+       <Route path="/EVCalculator" element={<EVCalculator />} />
+      <Route path="/Friends" element={<Friends />} />
+       <Route path="/ArbCalc" element={<ArbCalc />} />
+      <Route path="/Leaderboards" element={<Leaderboards />} />
+       <Route path="/BettingEducationCenter" element={<BettingEducationCenter />} />
+      <Route path="/ContactUs" element={<ContactUs />} />
+      <Route path="/ErrorPage" element={<ErrorPage />} />
+      <Route path="/Unauth" element={<Unauth />} />
+       <Route path="/SignUp" element={<SignUp />} />
+       <Route path="/Achievements" element={<Achievements />} />
     </Routes>
+
+      <Footer/>
    
-    <Footer />
-    <Routes>
-    <Route path ="/BettingEducationCenter" element={<BettingEducationCenter />} />
-    </Routes>
+    
       </>
-  
-      
-      
   )
-  
 }
 /*  CONNECTING TO DATABASE
 const { MongoClient, ServerApiVersion } = require('mongodb');
