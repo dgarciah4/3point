@@ -9,7 +9,9 @@ Run npm install to install latest packages
 if failed to install run the following individual commands.
 
 npm install --save-dev dotenv
+
 npm install axios
+
 npm install @react-oauth/google@latest
 
 
