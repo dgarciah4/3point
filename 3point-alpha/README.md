@@ -18,15 +18,25 @@ New file created [.env] add the following items to the file as list
 REACT_APP_GOOGLE_OAUTH_CLIENTID = "352439526128-mbjjk65sghqmn5fuqac4dk1nkeplsnkf.apps.googleusercontent.com"
 
 ######################################
+
 update [.gitignore] file with the following to ignore local environment files or keys. Add as a list
+
 node_modules
+
 .DS_Store
+
 dist
+
 dist-ssr
+
 *.local
+
 .env
+
 .replit
+
 replit_zip_error_log.txt
+
 replit.nix
 
 
