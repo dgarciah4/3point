@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-origin: padding-box;
 }
 h1 {
   color: white

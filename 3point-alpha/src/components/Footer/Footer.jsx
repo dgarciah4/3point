@@ -6,13 +6,13 @@ import { NavLink, Link } from 'react-router-dom'
 
 
 const Footer = () => {
-  return <footer class="text-white body-font border-t border-gold">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+  return <footer class="text-white body-font border-t border-gold mb-0 ">
+  <div class="container px-5 py-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-50 flex-shrink-1 md:mx-0 mx-auto text-center md:text-left">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         <NavLink to="/Home" className="-m-1.5 p-1.5">
             <span className="sr-only">3Point</span>
-            <img className=""style={{height: 205, width: 205}} src={FooterLogo} alt="" />
+            <img className=""style={{height: 250, width: 250}} src={FooterLogo} alt="" />
           </NavLink>
       </a>
     </div>

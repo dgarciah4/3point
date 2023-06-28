@@ -1,14 +1,49 @@
-import React from 'react'
 import { FaLock } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import { AiOutlineGoogle, AiFillFacebook } from "react-icons/ai"
 import { NavLink } from 'react-router-dom';
 
+import React, { useState, useEffect } from 'react';
+import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
 
 function LoginPage() {
+  const [ user, setUser ] = useState([]);
+  const [ profile, setProfile ] = useState([]);
+
+  const login = useGoogleLogin({
+      onSuccess: (codeResponse) => setUser(codeResponse),
+      onError: (error) => console.log('Login Failed:', error)
+  });
+
+  useEffect(
+      () => {
+          if (user) {
+              axios
+                  .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                      headers: {
+                          Authorization: `Bearer ${user.access_token}`,
+                          Accept: 'application/json'
+                      }
+                  })
+                  .then((res) => {
+                      setProfile(res.data);
+                  })
+                  .catch((err) => console.log(err));
+          }
+      },
+      [ user ]
+  );
+
+  // log out function to log the user out of google and set the profile array to null
+  const logOut = () => {
+      googleLogout();
+      setProfile(null);
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-transparent">
-      <div className="bg-gray-300 bg-opacity-40 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg p-8">
+      <div className="bg-gray-300 bg-opacity-40 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg p-10">
         <h2 className="text-3xl font-bold text-black mb-6">Log In</h2>
         <form>
           <div className="mb-4 relative">
@@ -50,12 +85,29 @@ function LoginPage() {
           >
             Log In
           </button>
-        <div className="flex justify-center mt-2">
+          <div className="flex justify-center mt-2">
             <span className="text- text-sm font-medium">Or</span>
           </div>
           <div className="flex justify-center mt-2">
-            <AiOutlineGoogle className="text-black text-3xl" />
-            <AiFillFacebook className="text-black text-3xl ml-2" />
+         {/* <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+          
+          */}
+        <div>  
+          {profile ? (
+                <div>
+                    <h3>User Logged in</h3>
+                    <p>Name: {profile.name}</p>
+                    <p>Email Address: {profile.email}</p>
+                    <br />
+                    <br />
+                    <button onClick={logOut}>Log out</button>
+                </div>
+            ) : (
+                <button onClick={() => login()}><AiOutlineGoogle className="text-black text-3xl" /> </button>
+            )}
+
+        </div>
+        <AiFillFacebook className="text-black text-3xl ml-2" />
           </div>
            <div className="flex justify-center mt-2">
             <span className="text-sm text-black">

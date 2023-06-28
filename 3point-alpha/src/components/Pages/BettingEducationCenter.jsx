@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 const BettingEducationCenter = () => {
     return(
         <div className='bg-transparent'> 
-            <h1 className='text-center lg: text-center dark:text-white'>Welcome to the Betting Education Center. Here you can learn strategies on how to place bets,
+            <h2 className='font-normal text-center lg: text-base dark:text-white mx-20 leading-6'>Welcome to the Betting Education Center. Here you can learn strategies on how to place bets,
         make good betting decisions, budget your money and find resources to help with overcoming any betting addicitions and/or impulsive behaviors.
-            </h1> 
+            </h2> 
 
 
         <div className ='mx-6 py-10 text-center md:text-left lg:text-center grid-1 grid gap-8 md:grid-cols-3 lg:grid-cols-4'>

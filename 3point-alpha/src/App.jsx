@@ -37,9 +37,13 @@ import Unauth from './components/Pages/Unauth'
 import SignUp from './components/Pages/SignUp'
 import Footer from './components/Footer/Footer'
 
+import { GoogleLogin } from '@react-oauth/google';
+
 export default function App() {
+
   return (
     <>
+
        <Navbar/>
     <Routes>
       <Route path="/Home" element={<Home />} />
@@ -72,6 +76,7 @@ export default function App() {
       <Route path="/Unauth" element={<Unauth />} />
        <Route path="/SignUp" element={<SignUp />} />
        <Route path="/Achievements" element={<Achievements />} />
+       
     </Routes>
 
       <Footer/>
