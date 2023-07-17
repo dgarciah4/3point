@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 	//<GoogleOAuthProvider clientId='${OAUTH}'>
 	//<GoogleOAuthProvider clientId="{process.env.REACT_APP_GOOGLE_OAUTH_CLIENTID}">
 
-	<GoogleOAuthProvider clientId='352439526128-mbjjk65sghqmn5fuqac4dk1nkeplsnkf.apps.googleusercontent.com'>
+	<GoogleOAuthProvider clientId=''>
 		<React.StrictMode>
 			<BrowserRouter>
 				<App />
